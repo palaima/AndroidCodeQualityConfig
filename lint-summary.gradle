@@ -23,7 +23,7 @@ task lintSummary(type: LintSummaryTask, dependsOn: hasLintSummaryExecutable) {
     group JavaBasePlugin.VERIFICATION_GROUP
 
     outputs.upToDateWhen { false }
-    onlyIf { gradle.startParameter.colorOutput && hasLintSummaryExecutable.hasExecutable() }
+    onlyIf { gradle.startParameter.consoleOutput && hasLintSummaryExecutable.hasExecutable() }
 }
 
 
